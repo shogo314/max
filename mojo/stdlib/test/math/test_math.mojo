@@ -184,6 +184,14 @@ alias F64x4 = SIMD[DType.float64, 4]
 
 
 def test_sqrt():
+    assert_equal(sqrt(-1), 0)
+    assert_equal(sqrt(0), 0)
+    assert_equal(sqrt(1), 1)
+    assert_equal(sqrt(2**34 - 1), 2**17 - 1)
+    assert_equal(sqrt(2**34), 2**17)
+    assert_equal(sqrt(10**16), 10**8)
+    assert_equal(sqrt(Int.MAX), 3037000499)
+
     var i = SIMD[DType.index, 4](0, 1, 2, 3)
     assert_equal(sqrt(i**2), i)
     assert_equal(sqrt(64), 8)
