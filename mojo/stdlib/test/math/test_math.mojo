@@ -187,6 +187,8 @@ def test_sqrt():
     assert_equal(sqrt(-1), 0)
     assert_equal(sqrt(0), 0)
     assert_equal(sqrt(1), 1)
+    assert_equal(sqrt(63), 7)
+    assert_equal(sqrt(64), 8)
     assert_equal(sqrt(2**34 - 1), 2**17 - 1)
     assert_equal(sqrt(2**34), 2**17)
     assert_equal(sqrt(10**16), 10**8)
@@ -194,8 +196,6 @@ def test_sqrt():
 
     var i = SIMD[DType.index, 4](0, 1, 2, 3)
     assert_equal(sqrt(i**2), i)
-    assert_equal(sqrt(64), 8)
-    assert_equal(sqrt(63), 7)
 
     var f32x4 = 0.5 * F32x4(0.0, 1.0, 2.0, 3.0)
 
