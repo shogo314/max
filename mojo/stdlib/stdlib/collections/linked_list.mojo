@@ -373,10 +373,10 @@ struct LinkedList[
         raise String("Invalid index for pop: {}").format(Int(i))
 
     fn maybe_pop(mut self) -> Optional[ElementType]:
-        """Removes the head of the list and returns it, if it exists.
+        """Removes the tail of the list and returns it, if it exists.
 
         Returns:
-            The head of the list, if it was present.
+            The tail of the list, if it was present.
 
         Notes:
             Time Complexity: O(1).
