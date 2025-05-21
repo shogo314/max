@@ -345,7 +345,7 @@ struct LinkedList[
             Ownership of the indicated element.
 
         Notes:
-            Time Complexity: O(1).
+            Time Complexity: O(n) in len(self).
         """
         var current = self._get_node_ptr(Int(i))
 
@@ -408,7 +408,7 @@ struct LinkedList[
             The element, if it was found.
 
         Notes:
-            Time Complexity: O(1).
+            Time Complexity: O(n) in len(self).
         """
         var current = self._get_node_ptr(Int(i))
 
@@ -482,7 +482,7 @@ struct LinkedList[
             elem: The item to insert into the list.
 
         Notes:
-            Time Complexity: O(1).
+            Time Complexity: O(n) in len(self).
         """
         var i = max(0, index(idx) if Int(idx) >= 0 else index(idx) + len(self))
 
